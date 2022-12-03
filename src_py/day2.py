@@ -1,3 +1,4 @@
+# function for part one
 def points(char1: str, char2: str):
     score = (ord(char2) - ord('W'))
     other = (ord(char1) - ord('A') + 1)
@@ -21,7 +22,7 @@ def points(char1: str, char2: str):
     # r - p = 1-2 = -1
     # p - s = 2-3 = -1
 
-
+#function for part two
 def points2(char1:str, char2:str):
     result = (ord(char2) - ord('X')) * 3
     other = (ord(char1) - ord('A') + 1)
