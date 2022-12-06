@@ -32,6 +32,16 @@ for instruction in instructions:
         stacks[int(instruction[DESTINATION][0]) - 1].append(stacks[int(instruction[SOURCE][0]) - 1].pop())
         print("\t\'" + stacks[int(instruction[DESTINATION][0]) - 1][len(stacks[int(instruction[DESTINATION][0]) - 1]) - 1] + "\': " + instruction[SOURCE] + " -> " + instruction[DESTINATION])
 
+# part two
+aux_stack = []
+for instruction in instructions:
+    for i in range(0, int(instruction[QUANTITY])):
+        aux_stack.append(stacks[int(instruction[SOURCE][0]) - 1].pop())
+    moved_items = len(aux_stack)
+    for i in range(0, moved_items):
+        stacks[int(instruction[DESTINATION][0]) - 1].append(aux_stack.pop())
+        print("\t\'" + stacks[int(instruction[DESTINATION][0]) - 1][len(stacks[int(instruction[DESTINATION][0]) - 1]) - 1] + "\': " + instruction[SOURCE] + " -> " + instruction[DESTINATION])
+
 print("RESULT: ")
 print("\t", end="")
 for stack in stacks:
