@@ -1,4 +1,4 @@
-f = open("../data/day5_test.txt", "r")
+f = open("../data/day5.txt", "r")
 contents, instructions = f.read().split("\n\n")
 print(contents)
 
@@ -27,10 +27,10 @@ SOURCE = 1
 DESTINATION = 2
 
 # part one
-for instruction in instructions:
-    for i in range(0, int(instruction[QUANTITY])):
-        stacks[int(instruction[DESTINATION][0]) - 1].append(stacks[int(instruction[SOURCE][0]) - 1].pop())
-        print("\t\'" + stacks[int(instruction[DESTINATION][0]) - 1][len(stacks[int(instruction[DESTINATION][0]) - 1]) - 1] + "\': " + instruction[SOURCE] + " -> " + instruction[DESTINATION])
+#for instruction in instructions:
+#    for i in range(0, int(instruction[QUANTITY])):
+#        stacks[int(instruction[DESTINATION][0]) - 1].append(stacks[int(instruction[SOURCE][0]) - 1].pop())
+#        print("\t\'" + stacks[int(instruction[DESTINATION][0]) - 1][len(stacks[int(instruction[DESTINATION][0]) - 1]) - 1] + "\': " + instruction[SOURCE] + " -> " + instruction[DESTINATION])
 
 # part two
 aux_stack = []

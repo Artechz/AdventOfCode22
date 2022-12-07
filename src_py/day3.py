@@ -5,8 +5,8 @@ contents = f.read().split("\n")
 total_priority = 0
 for elf in contents:
     repeated_token = "";
-    rucksack_1 = slice(0, len(elf) // 2)
-    rucksack_2 = slice(len(elf) // 2, len(elf))
+    rucksack_1 = slice(0, len(elf) // 2) #rucksack_1 = rucksack_1[0:len(elf)//2]
+    rucksack_2 = slice(len(elf) // 2, len(elf)) #rucksack_2 = rucksack_2[len(elf)//2:len(elf)]
     for char1 in elf[rucksack_1]:
         for char2 in elf[rucksack_2]:
             if char1 == char2:
